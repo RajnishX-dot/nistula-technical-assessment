@@ -110,4 +110,4 @@ CREATE UNIQUE INDEX uq_messages_channel_external ON messages (channel, external_
 CREATE INDEX idx_messages_conversation_sent ON messages (conversation_id, sent_at);
 CREATE INDEX idx_messages_inbound_query ON messages (query_type) WHERE direction = 'inbound';
 
-COMMENT ON TABLE messages IS 'Inbound: classifier label + inbound_confidence. Outbound: composition + optional draft_snapshot for audit.';
+COMMENT ON TABLE messages IS 'inbound classifier + score; outbound send path + frozen draft if you need audit';
