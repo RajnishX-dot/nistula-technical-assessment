@@ -2,7 +2,7 @@
 
 Spring Boot 3.2, Java 17. Endpoints: `POST /webhook/message`, `GET /health` (port 8080 unless you override `server.port`).
 
-There is also `schema.sql` (Postgres) and `thinking.md` (written answers for the scenario part of the brief).
+There is also `schema.sql` (Postgres) and `thinking.md`.
 
 ## Env vars
 
