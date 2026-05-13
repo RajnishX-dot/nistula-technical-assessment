@@ -96,7 +96,7 @@ public class WebhookController {
                     completionProperties.getModelId().strip(),
                     extraHeaders);
         } catch (CompletionFailureException e) {
-            log.error("draft_reply failed", e);
+            log.error("completion call failed", e);
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, e.getMessage(), e);
         }
 

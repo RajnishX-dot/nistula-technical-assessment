@@ -16,13 +16,15 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<ErrorBodyDto> handleStatus(ResponseStatusException ex) {
-        String code =
-                switch (ex.getStatusCode().value()) {
-                    case 502 -> "bad_gateway";
-                    case 503 -> "service_unavailable";
-                    case 422 -> "validation_error";
-                    default -> "error";
-                };
+        int status = ex.getStatusCode().value();
+        String code = "error";
+        if (status == 502) {
+            code = "bad_gateway";
+        } else if (status == 503) {
+            code = "service_unavailable";
+        } else if (status == 422) {
+            code = "validation_error";
+        }
         String reason = ex.getReason() != null ? ex.getReason() : "";
         return ResponseEntity.status(ex.getStatusCode()).body(new ErrorBodyDto(code, reason));
     }

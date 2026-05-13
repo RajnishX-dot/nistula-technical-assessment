@@ -36,9 +36,9 @@ public class CompletionService {
                     .strip();
 
     private static final String SYSTEM_PROMPT =
-            "Draft a short guest reply for Nistula (Goa villas). Polite SMS style. "
-                    + "Use only facts from the property block. If missing, say the team will confirm. "
-                    + "Return one JSON object only: {\"drafted_reply\":\"...\"}";
+            "You are replying as Nistula (Goa villas). Keep it short and normal. "
+                    + "Stick to the property facts in the message; if something isn’t listed, say you’ll confirm with the team. "
+                    + "Reply as a single JSON object: {\"drafted_reply\":\"...\"}";
 
     private final ObjectMapper objectMapper;
 
