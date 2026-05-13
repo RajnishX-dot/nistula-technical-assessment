@@ -9,7 +9,6 @@ def compute_confidence(
     classification: ClassificationResult,
     reply_word_count: int,
 ) -> float:
-    # hand-rolled score for routing, not "true" probability
     base = classification.score
 
     context_boost = 0.0

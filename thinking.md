@@ -1,13 +1,13 @@
-## A — reply now
+## A — immediate reply
 
-Hi, Nistula here — really sorry about the hot water, especially with people coming over. I've messaged the night caretaker + duty manager so someone's on it for the geyser/mains. I can't sign off refunds from chat, but I've forwarded everything to a manager so you get a proper answer on that side. If anything smells electrical / feels unsafe, tell me straight away.
+Hi, this is Nistula. Sorry you are without hot water, especially with guests coming. I have contacted the night caretaker and duty manager so someone can check the geyser and mains. I cannot approve refunds from this channel; I have forwarded your message and booking details to a manager for a proper response. If you notice burning smell, sparks, or anything unsafe, tell me immediately.
 
-Why: acknowledge first, don't argue, don't promise money you can't promise, still give a clear next step.
+Rationale: acknowledge the issue, set operational next steps, avoid committing to refunds outside authority, add a basic safety line.
 
-## B — not just a chat bubble
+## B — platform response
 
-Spin up an incident on the booking + property + thread, tag it high severity. SMS/push the caretaker, ping duty manager, cc ops on email so it's not one person's memory. Log whatever maintenance history you have. If nobody's on-site in ~20m, auto-page a plumber vendor. If there's a spare room nearby, offer it. At 30m with no human ack: backup on-call + a short "still on it, ping again in 15" message in-thread + escalate to whoever owns brand risk after hours. Log outbound as ai vs edited vs typed.
+Open a high-severity incident linked to reservation, property, conversation, and message. Notify caretaker (SMS, in-app), duty manager (push), and copy property operations on email. Record maintenance history, vendor SLA, and recent tickets. If on-site response is delayed beyond an agreed window, dispatch a plumber from the approved vendor list. If alternate accommodation exists nearby, offer it. If no human acknowledgement within thirty minutes, escalate to backup on-call, post a short status update in the guest thread with a follow-up time, and escalate to the executive on-call per runbook. Log whether each outbound message was sent from a draft unchanged, draft edited, or composed manually.
 
-## C — third time same villa
+## C — repeated hot water issues
 
-Stop treating it as one-off bad luck. Flag the cluster on B1, force a hardware ticket after 3 hits in ~60 days, pause auto-promises on hot water until a plumber signs off. One-page host checklist for arrivals. Optional boring stuff that actually helps: morning hot-water check logged before check-in + proactive "showers checked" note day-of + vendor SLA breach alert so guest #4 doesn't find out first.
+Treat repeated incidents on the same property as a maintenance signal, not isolated noise. After three similar events within a rolling window, create a capital repair ticket, block unsupervised guest-facing promises on that subsystem until a vendor signs off, and distribute a short host checklist for pre-arrival checks. Add scheduled verification before check-in where feasible, and alert operations when vendor SLA is breached.

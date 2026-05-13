@@ -1,7 +1,5 @@
-# pinned because take-homes that drift a year later are annoying
 fastapi==0.115.6
 uvicorn[standard]==0.32.1
-anthropic==0.40.0
 pydantic==2.10.3
 pydantic-settings==2.6.1
 httpx==0.28.1

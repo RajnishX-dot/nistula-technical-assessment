@@ -7,7 +7,7 @@ from app.schemas import QueryType
 @dataclass(frozen=True)
 class ClassificationResult:
     query_type: QueryType
-    score: float  # used downstream for confidence; not super scientific
+    score: float
 
 
 def _lower(text: str) -> str:
@@ -15,8 +15,6 @@ def _lower(text: str) -> str:
 
 
 def classify_guest_message(message: str) -> ClassificationResult:
-    # rules-first so we always log intent before spending on the model.
-    # order: complaint-ish stuff wins over random "available" hits.
     t = _lower(message)
 
     def has_any(words: tuple[str, ...]) -> int:
@@ -110,7 +108,6 @@ def classify_guest_message(message: str) -> ClassificationResult:
         )
     )
 
-    # people paste availability + price in one message a lot
     if availability_hits >= 1 and pricing_hits >= 1:
         return ClassificationResult(
             QueryType.PRE_SALES_AVAILABILITY,
