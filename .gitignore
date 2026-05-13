@@ -1,4 +1,14 @@
 .env
+.env.local
+target/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.class
+hs_err_pid*.log
+replay_pid*.log
 .venv/
 venv/
 __pycache__/
